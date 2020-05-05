@@ -1,4 +1,4 @@
-\ProvidesPackage{proposal}[2018/02/27]
+\ProvidesPackage{proposal}[2020/05/05]
 
 \usepackage[T1]{fontenc}
 \usepackage[english, ngerman, russian]{babel}
@@ -6,7 +6,7 @@
 \usepackage{amsmath}
 \usepackage[hidelinks]{hyperref}
 \usepackage{microtype}
-\usepackage[headheight = 28pt, tmargin = 70pt, lmargin = 55pt, rmargin = 55pt, bmargin = 70pt]{geometry}
+\usepackage[headheight = 55pt, tmargin = 70pt, lmargin = 70pt, rmargin = 55pt, bmargin = 55pt, includefoot=false]{geometry}
 \usepackage[exponent-product = \cdot]{siunitx}
 \usepackage{rotating}
 \usepackage{helvet}
@@ -14,11 +14,14 @@
 \usepackage{scrlayer-scrpage}
 \usepackage{eurosym}
 \usepackage{fp}
+\usepackage{booktabs}
 \usepackage{pgfgantt}
 
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
+\usepackage{graphicx}
+\definecolor{dfg}{HTML}{004da2}
 
 \usepackage[backend = biber,
     style = alphabetic,
@@ -44,9 +47,50 @@
 }
 \ExecuteOptions{german}
 \ProcessOptions\relax
-\ohead{\pagemark}
-\cfoot{}
-\chead{}
+
+% layout for the first page
+\newpairofpagestyles{firstpage}{%
+  \ohead{\scriptsize\pagemark}
+  \ihead{\scriptsize\form}
+  \chead{}
+  \ifoot{%
+    \scriptsize
+    \raisebox{70pt}[0pt][0pt]{%
+      \begin{tabular}[t]{@{}l}
+        \textcolor{dfg}{\textbf{Deutsche Forschungsgemeinschaft}} \\
+        Kennedyallee 40 $\cdot$ 53175 Bonn $\cdot$ postal address: 53170 Bonn \\
+        phone: + 49 228 885-1 $\cdot$ fax: + 49 228 885-2777 $\cdot$ postmaster@dfg.de $\cdot$ www.dfg.de 
+      \end{tabular}
+    }
+  }
+  \cfoot{}
+  \ofoot{
+    \raisebox{50pt}[0pt][0pt]{%
+      \includegraphics[height=25pt]{dfg-logo}
+    }
+  }
+}
+% layout for normal pages
+\newpairofpagestyles{normalpage}{%
+  \ohead{\scriptsize\pagemark}
+  \ihead{\scriptsize\form}
+  \ifoot{}
+  \ofoot{}
+}
+
+% title header
+\renewcommand{\maketitle}{%
+  {\raggedright{} \normalsize \bfseries
+    Project Description -- Draft Proposal for a Research Unit \par\vspace{.6em}
+      \project{} \par\vspace{.6em}
+      \spokesperson{} \par
+    \rule{\textwidth}{0.5pt} \par\vspace{.6em}
+    Project Description -- Draft Proposal for a Research Unit
+  }
+  \enlargethispage{-50pt}
+  \thispagestyle{firstpage}
+  \pagestyle{normalpage}
+}
 
 \KOMAoptions{paper=a4}
 \KOMAoption{fontsize}{11pt}

@@ -4,40 +4,84 @@
 
 \addbibresource{sources.bib}
 
-\newcommand{\spokesperson}{Max Mustermann, Ph.D., Musterstadt}
-\newcommand{\project}{Project title}
+\newcommand{\project}{[Title of the Research Unit]}
+\newcommand{\spokesperson}{[First name  last name, research institution of spokesperson, research area]}
+\newcommand{\form}{DFG form 53.20 -- 02/20}
 
 \begin{document}
 
-{\raggedright{} \normalsize \bfseries 
-	Project Description - Draft Proposal for a Research Unit \par
-    \project{} \par
-    \spokesperson{} \par
-	\rule{\textwidth}{0.5pt} \par
-	Project Description - Draft Proposal for a Research Unit
-}
+\maketitle
 
 \section{Overview of participating researchers and projects}
 
 \subsection{Participating researchers: Project leaders (applicants) and co-applicants}
+%
+% Co-applicants are defined as researchers who assume significant responsibility in the project but neither request nor receive project funding.
+%
+% [Table] Academic title, first name, last name, year of doctoral completion, institution, research area and, where applicable, project code
+
+\begin{center}
+\footnotesize
+\begin{tabular}{lllll}
+  Applicant & y.o.d.c.\textsuperscript{$\ast$} & Institution & Research area & Project code \\
+  \midrule
+  \textit{Academic title, first name, last name} & \textit{year} &  &  & \textit{if applicable} \\
+  \bottomrule
+  {\scriptsize\textsuperscript{$\ast$}year of doctoral completion}
+\end{tabular}
+\end{center}
+
 
 \subsection{List of projects}
+%
+% [Table] Project code where applicable, project leader, project title, institution, research area
+
+\begin{center}
+\footnotesize
+\begin{tabular}{lllll}
+  Project code & Project leader & Project title & Institution & Research area\\
+  \midrule
+  \textit{if applicable} &  &  &  &  \\
+  \bottomrule
+\end{tabular}
+\end{center}
 
 
 \section{Summary of the joint work programme}
+%
+% [Text] With reference to the structure and items listed in the proposal instructions (form 54.03, section II), summarise the Research Unit’s joint work programme (item 2) and additional objectives and measures (item 3) in no more than ten pages.
+%
+% - Objectives of the overall project, potential impact on the state of the art, expected benefits of collaboration
+% - (Joint) Preliminary work and project-specific qualifications of participating researchers/working groups as they relate to the proposed project
+% - Joint work programme including proposed research methods
+% - Potential impact on the research area and local research environment (for local collaborations) as well as how the Research Unit differs from other programmes working in a directly related area
 
 
 \section{Additional objectives and measures}
+%
+% [Text]
+% - National and international cooperation, collaboration with international partners
+% - Research data and knowledge management measures and support by participating institutions
+% - Measures to advance research careers
+% - Measures to promote diversity and equal opportunity
 
 
 \section{Estimated overall project costs including individual projects}
+%
+% [Text]
 
+
+% ----------------------------------------------------------------
+% References: List up to ten in total.
+%
+% These references are set automatically based on their category ("reviewed", "nonreviewed", "patents_pending", "patents", and those without a category)
+%
 \section{Project-related publications by members of the Research Unit}
 
 \subsection{Articles published by outlets with scientific quality assurance, book publications, and works accepted for publication but not yet published}
 \printbibliography[category=reviewed, heading=none]
 
-\subsubsection{Other publications}
+\subsubsection{Other publications, both peer-reviewed and non-peer-reviewed}
 \printbibliography[category=nonreviewed, heading=none]
 
 \subsubsection{Patents}
@@ -48,17 +92,24 @@
 \subsubsubsection{Issued}
 \printbibliography[category=patents, heading=none]
 
-
-\section{Bibliography}
+\section{Bibliography} % publications cited in the proposal but not listed under item 5
 \printbibliography[notcategory=reviewed, notcategory=nonreviewed, notcategory=patents_pending, notcategory=patents, heading=none]
+% ----------------------------------------------------------------
 
 
 \section{Summary of individual projects}
+%
+% [Text] One to two pages each including project-specific publications
 
 
 \section{CVs of participating researchers}
+%
+% [Text]
 
 
 \section{Cooperation outside the Research Unit, researchers with whom you have collaborated scientifically within the past three years}
+%
+% [Text]
+
 
 \end{document}
